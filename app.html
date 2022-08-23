@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áreas Verdes</title>
+    <link rel="stylesheet" href="CSS/styless.css">
+</head>
+
+<body>
+
+    <header class="nav-bar">
+        <nav>
+            <div class="container navegacao">
+                <div>
+                    <img src="img\Brasao.png" alt="Brasao CG">
+                </div>
+                <div class="nav-text">
+                    <div>
+                        <h1>CGAP – Coordenadoria de Gestão de Áreas Públicas</h1>
+                    </div>
+                    <div>
+                        <h2>Secretária Municipal de Meio Ambiente e Gestão Urbana</h2>
+                    </div>
+                    <div class="nav-menu">
+                        <ul style="list-style-type:none">
+                            <li><a href="#Cadastro"><span>Cadastro</span></a></li>
+                            <li><a href="#Documentacao"><span>Documentação</span> </a></li>
+                            <li><a href="#Responsavel-Tecnico"><span>Responsável Técnico</span></a></li>
+                            <li><a href="#Dados-do-Local"><span>Dados do Local</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="Cadastro" class="cadastro">
+            <div class="container cadastro-pessoal">
+                <h2>Cadastro</h2>
+                <div class="input-cadastro-requerente">
+                    <p>Requerente:</p>
+                    <input type="text" placeholder="Nome completo">
+                    <p>RG:</p>
+                    <input type="text" placeholder="Registro Geral - RG">
+                    <p>CPF:</p>
+                    <input type="text" placeholder="CPF">
+                </div>
+            </div>
+        </section>
+
+        <section id="Documentacao" class="cadastro">
+            <div class="container cadastro-documentacao">
+                <h2>Documentação</h2>
+                <div class="input-cadastro-imovel">
+                    <p>Documentação:</p>
+                    <input type="text" placeholder="Documentação/Autuação">
+                    <p>Data Atuação:</p>
+                    <input type="date" placeholder="Data Atuação">
+                    <p>Tramitações:</p>
+                    <input type="text" placeholder="Processo Administrativo">
+                    <p>Órgão Atuante:</p>
+                    <input type="text" placeholder="Órgão Atuante">
+                    <p>Processo Administrativo:</p>
+                    <input type="text" placeholder="Processo Administrativo vinculado">
+                    <p>PJ:</p>
+                    <input type="text" placeholder="N. Pessoa Jurídica">
+                    <p>PGM:</p>
+                    <input type="text" placeholder="Órgão Atuante">
+                    <p>Guarda Municipal:</p>
+                    <input type="text" placeholder="N. de invasores">
+                    <p>Guarda Municipal:</p>
+                    <input type="text" placeholder="RelaçãoProvas">
+                    <p>Guarda Municipal:</p>
+                    <input type="text" placeholder="Relarório Motivação">
+                    <p>AMHASF:</p>
+                    <input type="text" placeholder="Nº Cadastro-art.24, Lei 109/07">
+                    <p>Obs:</p>
+                    <textarea cols="5" rows="3" placeholder="Descreva as observações"></textarea>
+                    <p>Reincidência:</p>
+                    <div class="cadastro-radio-imovel">
+                        <input type="radio" id="SIM" name="fav_language" value="SIM">
+                        <label for="html">SIM</label><br>
+                        <input type="radio" id="NAO" name="fav_language" value="NAO">
+                        <label for="css">NÃO</label><br>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Responsavel-Tecnico" class="cadastro">
+            <div class="container cadastro-tecnico">
+                <h2>Responsável Técnico</h2>
+                <div class="input-cadastro-tecnico">
+                    <p>Auditor Fiscal:</p>
+                    <input type="text" placeholder="Nome completo">
+                    <p>Lançamento:</p>
+                    <input type="date" placeholder="Data">
+                </div>
+            </div>
+        </section>
+        <section id="Dados-do-Local" class="cadastro">
+            <div class="container cadastro-local">
+                <h2>Dados do Local</h2>
+                <div class="input-cadastro-local">
+                    <p>Região Urbana:</p>
+                    <input type="text" placeholder="Região Urbana">
+                    <p>Bairro:</p>
+                    <input type="text" placeholder="Bairro">
+                    <p>Parcelamento:</p>
+                    <input type="text" placeholder="Parcelamento">
+                    <p>Área:</p>
+                    <input type="text" placeholder="Área">
+                    <p>Logradouro:</p>
+                    <input type="text" placeholder="Logradouro">
+                    <p>Inscrição Imobiliaria:</p>
+                    <input type="text" placeholder="Inscrição Imobiliaria">
+                    <p>Obs:</p>
+                    <textarea cols="5" rows="3" placeholder="Descreva as observações"></textarea>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container footer-botao">
+                <input type="submit" value="SALVAR">
+                <input type="submit" value="APAGAR">
+            </div>
+        </footer>
+    </main>
+
+</body>
+
+</html>
