@@ -1,0 +1,666 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --text-formulario: #FFFFFF;
+    --cor-de-fundo: #1d1d1f;
+    --cor-formulario: #4d4c4c;
+    --borda-brasao: #FFFFFF;
+    --borda-formulario: rgba(168, 165, 165, 0.383);
+    /* rgba(149, 149, 149, 0.701)*/
+}
+
+* {
+    box-sizing: border-box;
+    /* A largura da borda é descontada do tamanho */
+}
+
+html body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--cor-de-fundo);
+    color: var(--text-formulario);
+}
+
+.container {
+    width: 100%;
+    max-width: 990px;
+    margin: 0 auto;
+}
+
+input {
+    border-radius: 10px;
+    height: 30px;
+    border: solid 2px var(--cor-de-fundo);
+    font-weight: 400;
+    font-size: 14px;
+}
+/*Deixa a borda vermelha para entradas inválidas*/
+input:invalid{
+    border: 2px solid red;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+nav{
+    padding-top: 10px;
+}
+
+.nav-bar {
+    height: 180px;
+    background-color: var(--cor-formulario);
+}
+
+.navegacao {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border: var(--borda-formulario) 5px solid;
+    border-radius: 10px;
+    height: 160px;
+}
+
+.navegacao img {
+    margin-top: 15px;
+    margin-left: 15px;
+    height: 120px;
+    width: 120px;
+    border: 1px solid var(--borda-brasao);
+    border-radius: 5px;
+}
+
+.nav-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 830px;
+}
+
+.nav-text h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0px;
+    margin-top: 10px;
+    padding: 0px;
+}
+
+.nav-text h2 {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 2px;
+    padding: 0px;
+}
+
+.nav-menu {
+    justify-content: space-between;
+    margin: 0px;
+    margin-top: 20px;
+    padding: 0px;
+}
+
+.nav-menu ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    align-content: space-around;
+}
+
+.nav-menu a {
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    color: var(--text-formulario);
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+/*Cadastro do imóvel*/
+.cadastro-local {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--cor-formulario);
+    border: var(--borda-formulario) 5px solid;
+    border-radius: 15px;
+    height: 855px;
+}
+
+.cadastro-local h2 {
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--text-nav);
+    text-decoration: underline rgb(252, 252, 252);
+    padding-left: 380px;
+}
+
+.input-cadastro-local {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.localizacao-imovel {
+    display: flex;
+    flex-direction: row;
+    width: 820px;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px solid var(--borda-formulario);
+    border-radius: 10px;
+    margin-left: 50px;
+}
+
+.localizacao-imovel label {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.localizacao-imovel ::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.localizacao-imovel input {
+    width: 140px;
+    height: 30px;
+    text-align: flex-start;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.coordenada-utm {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.coordenada-utm ::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: flex-start;
+}
+
+.select-regiao {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+}
+
+.select-regiao fieldset {
+    border: var(--borda-formulario) 3px solid;
+    border-radius: 10px;
+}
+
+.select-regiao legend {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.select-regiao select {
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 10px;
+    height: 30px;
+}
+
+.cadastro-imovel-endereco {
+    display: flex;
+    flex-direction: column;
+    border: var(--borda-formulario) 3px solid;
+    border-radius: 10px;
+    width: 820px;
+    margin-left: 50px;
+}
+
+.cadastro-imovel-endereco ::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.cadastro-imovel-endereco label {
+    padding-left: 5px;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0px;
+}
+
+.cadastro-imovel-endereco input{
+    padding-left: 5px;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0px;
+}
+
+.cadastro-imovel-endereco fieldset {
+    border: 3px var(--borda-formulario) solid;
+    border-radius: 10px;
+}
+
+.cadastro-imovel-endereco legend {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.cadastro-imovel-endereco textarea {
+    width: 100%;
+    height: 120px;
+    border: 3px var(--borda-formulario) solid;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    resize: none;
+    /*Não permite redimensionar a área*/
+}
+
+.input-cadastro-local input {
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 30px;
+}
+
+.input-cadastro-local label {
+    margin: 3px;
+    margin-left: 5px;
+}
+
+/*Cadastro ocupante*/
+
+.cadastro {
+    margin-top: 50px;
+}
+
+.cadastro-pessoal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--cor-formulario);
+    border: var(--borda-formulario) 5px solid;
+    border-radius: 15px;
+    height: 300px;
+}
+
+.cadastro-pessoal h2 {
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: underline rgb(252, 252, 252);
+    padding-left: 415px;
+}
+
+.input-cadastro-ocupante {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 5px;
+    margin-left: 70px;
+    border: var(--borda-formulario) 3px solid;
+    border-radius: 15px;
+    width: 820px;
+    height: 150px;
+}
+
+.input-cadastro-ocupante label {
+    padding-left: 5px;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.input-cadastro-ocupante input {
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0px;  
+}
+
+.input-cadastro-ocupante ::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.input-cadastro-nome input {
+    margin-left: 3px;
+    height: 30px;
+    width: 800px;
+    text-align: flex-start;
+    font-size: 18px;
+}
+
+.input-cadastro-rg-cpf {
+    display: flex;
+    flex-direction: row;
+    width: 820px;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-cadastro-rg{
+    display: flex;
+    flex-direction: row;
+}
+
+.input-cadastro-rg label {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.input-cadastro-rg input {
+    height: 30px;
+    width: 158px;
+    text-align: flex-start;
+    font-size: 18px;  
+}
+
+.input-cadastro-rg ::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.input-cadastro-cpf{
+    margin-right: 15px;
+}
+
+.input-cadastro-cpf input {
+    height: 30px;
+    width: 158px;
+    text-align: flex-start;
+    font-size: 18px; 
+    font-weight: 400;
+}
+
+.input-cadastro-cpf ::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+/*Cadastro Documentação do Imóvel*/
+
+.cadastro-documentacao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--cor-formulario);
+    border: var(--borda-formulario) 5px solid;
+    border-radius: 15px;
+    height: 650px;
+}
+
+.cadastro-documentacao h2 {
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--text-nav);
+    text-decoration: underline rgb(252, 252, 252);
+    padding-left: 385px;
+}
+
+
+.input-cadastro-imovel {
+    display: flex;
+    flex-direction: column;
+    width: 820px;
+    border: 3px solid var(--borda-formulario);
+    border-radius: 10px;
+    margin-left: 70px;   
+}
+
+.input-cadastro-imovel label {
+    padding-left: 5px;
+    font-weight: 400;
+    font-size: 18px;
+}
+.input-cadastro-imovel input {
+    font-size: 18px;
+    font-weight: 400;
+    height: 30px;
+    align-items: flex-start;   
+}
+.input-cadastro-imovel ::placeholder {
+    font-size: 16px;
+    font-weight: 400;  
+    text-align: flex-start;    
+}
+
+.input-documentacao-multa {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border: var(--borda-formulario) 3px solid;
+    border-radius: 10px;
+    align-content: space-between;
+}
+
+.input-documentacao-multa input {
+    width: 155px;
+}
+
+.input-documentacao-notificacao {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.input-documentacao-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.input-documentacao-auto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-right: 5px;
+}
+
+.input-documentacao-numero-auto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 14px;
+}
+
+.input-documentacao-numero-auto label{
+    padding-right: 6px;
+}
+
+
+.input-processo-administrativo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: var(--borda-formulario) 3px solid;
+    border-radius: 10px;
+    margin-top: 30px; 
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.input-processo-administrativo input{
+    margin-left: 5px;
+    align-items: flex-start;
+}
+
+.input-processo-administrativo ::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    align-items: flex-start;
+}
+
+.input-cadastro-imovel legend {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.documentacao-textarea {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 30px;
+    height: 120px;
+}
+
+.documentacao-textarea fieldset {
+    border: var(--borda-formulario) 3px solid;
+    border-radius: 10px;
+    width: 100%;
+    height: 140px;
+    padding: 3px;
+}
+
+.documentacao-textarea legend{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.documentacao-textarea ::placeholder {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: start;
+}
+
+.documentacao-textarea textarea {
+    width: 100%;
+    height: 100px;
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    margin-left: 2px;
+    resize: none;
+}
+
+.documentacao-radio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.documentacao-radio fieldset {
+    border: var(--borda-formulario) 3px solid;
+    border-radius: 10px;
+}
+
+.cadastro-radio-imovel {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 2px;
+    align-content: center;
+}
+
+.cadastro-radio-imovel label {
+    font-size: 18px;
+    align-items: center;
+    margin-left: 0px;
+    padding: 0px;
+}
+
+.cadastro-radio-imovel input {
+    width: 20px;
+    height: 20px;
+    align-items: flex-start;
+}
+
+/*Cadastro Auditor*/
+.cadastro-tecnico {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--cor-formulario);
+    border-radius: 15px;
+    height: 280px;
+    border: var(--borda-formulario) 5px solid;
+}
+
+.cadastro-tecnico h2 {
+    font-weight: 700;
+    font-size: 24px;
+    margin-left: 390px;
+    color: var(--text-nav);
+    text-decoration: underline rgb(252, 252, 252);
+}
+
+.input-cadastro-tecnico {
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+    border: var(--borda-formulario) 3px solid;
+    border-radius: 15px;
+    width: 820px;    
+}
+
+.input-cadastro-tecnico label {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0px;
+}
+
+.input-cadastro-tecnico input {
+    font-weight: 400;
+    font-size: 18px;
+    align-items: flex-start;
+    margin: 5px;
+    height: 30px;
+}
+
+.input-cadastro-tecnico ::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    align-items: flex-start;
+}
+
+.footer {
+    margin-top: 50px;
+}
+.border-formulario-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: var(--cor-formulario);
+    height: 130px;
+    border-radius: 15px;
+    border: var(--borda-formulario) 5px solid;
+  
+}
+.footer-botao {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    width: 820px;
+    border: var(--borda-formulario) solid 3px;
+    border-radius: 15px;    
+}
+
+.footer-botao input {
+    font-size: 18px;
+    color: var(--text-formulario);
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    background-color: var(--cor-de-fundo);
+    border: 0px;
+    font-weight: 700;  
+}

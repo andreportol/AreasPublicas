@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áreas Verdes</title>
+    <link rel="stylesheet" href="CSS/styless1.css">
+</head>
+
+<body>
+    <header class="nav-bar">
+        <nav>
+            <div class="container navegacao">
+                <div>
+                    <img src="img\Brasao.png" alt="Brasao CG">
+                </div>
+                <div class="nav-text">
+                    <div>
+                        <h1>CGAP – Coordenadoria de Gestão de Áreas Públicas</h1>
+                    </div>
+                    <div>
+                        <h2>Secretária Municipal de Meio Ambiente e Gestão Urbana</h2>
+                    </div>
+                    <div class="nav-menu">
+                        <ul type="none">
+                            <li><a href="#Cadastro">Cadastro</a></li>
+                            <li><a href="#Documentacao">Documentação</a></li>
+                            <li><a href="#Responsavel-Tecnico">Responsável Técnico</a></li>
+                            <li><a href="#Dados-do-Local">Dados do Local</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <form action="script.php" name="areasPublicas" method="post" accept-charset="UTF-8">
+            <!--Cadastro Dados do Imóvel-->
+            <section id="Dados-do-Local" class="cadastro">
+                <div class="container cadastro-local">
+                    <h2>Dados do Imóvel</h2>
+                    <div class="input-cadastro-local">
+                        <div class="localizacao-imovel">
+                            <label>Inscrição Imobiliária:</label>
+                            <input type="text" placeholder="N. da Inscrição" autofocus maxlength="11" minlength="11">
+                            <div class="coordenada-utm">
+                                <label>Coordenada UTM: </label>
+                                <input type="number" min="0" max="100" step=". 01" placeholder="Coordenada X">
+                                <input type="number" step=".01" placeholder="Coordenada Y">
+                            </div>
+                        </div>
+                        <div class="select-regiao">
+                            <fieldset>
+                                <legend>Regiões Urbanas:</legend>
+                                <select name="regioes" id="regiao">
+                                    <option value="Anhanduizinho">Anhanduizinho</option>
+                                    <option value="Bandeira">Bandeira</option>
+                                    <option value="Centro">Centro</option>
+                                    <option value="Imbirussu">Imbirussu</option>
+                                    <option value="Lagoa">Lagoa</option>
+                                    <option value="Prosa">Prosa</option>
+                                    <option value="Segredo">Segredo</option>
+                                    <option value="Dist. Anhandui">Dist. Anhandui</option>
+                                    <option value="Dist. Rochedinho">Dist. Rochedinho</option>
+                                    <option value="Zona Rural">Zona Rural</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                        <div class="cadastro-imovel-endereco">
+                            <label>Bairro:</label>
+                            <input type="text" placeholder="Bairro" required>
+                            <label>Parcelamento:</label>
+                            <input type="text" placeholder="Parcelamento" required>
+                            <label>Quadra:</label>
+                            <input type="text" placeholder="Quadra" required>
+                            <label>Lote:</label>
+                            <input type="text" placeholder="Lote" required>
+                            <label>Logradouro:</label>
+                            <input type="text" placeholder="Logradouro" required>
+                            <fieldset>
+                                <legend>Obs:</legend>
+                                <textarea placeholder="Descreva as observações do local"></textarea>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+           <!-- </section>-->
+           
+          
+            <section id="Cadastro" class="cadastro">
+                <div class="container cadastro-pessoal">
+                    <h2>Cadastro</h2>
+                    <div class="input-cadastro-ocupante">
+                        <div class="input-cadastro-nome">
+                            <label for="ocupante">Ocupante:</label>
+                            <br>
+                            <input type="text" placeholder="Nome completo" id="ocupante" required>
+                        </div>
+                        <div class="input-cadastro-rg-cpf">
+                            <div class="input-cadastro-rg">
+                                <label for="rg">RG:</label>
+                                <input type="text" placeholder="Registro Geral - RG" id="rg">
+                            </div>
+                            <div class="input-cadastro-cpf">
+                                <label for="cpf">CPF:</label>
+                                <input type="text" placeholder="N. do CPF" id="cpf" maxlength="11" minlength="11">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="Documentacao" class="cadastro">
+                <div class="container cadastro-documentacao">
+                    <h2>Documentação</h2>
+                    <div class="input-cadastro-imovel">
+                        <div class="input-documentacao-multa">
+                            <div class="input-documentacao-notificacao">
+                                <div class=" input-documentacao-numero">
+                                    <label for="num_notif">Notificação:</label>
+                                    <input type="text" id="num_notif" placeholder="N. da Notificação" minlength="5"
+                                        maxlength="6">
+                                </div>
+                                <div class="input-documentacao-data">
+                                    <label for="date-notif">Data Notificação:</label>
+                                    <input type="date" id="date-notif" placeholder="Data Notificação">
+                                </div>
+                            </div>
+                            <div class="input-documentacao-auto">
+                                <div class="input-documentacao-numero-auto">
+                                    <label for="num_auto">Autuação:</label>
+                                    <input type="text" id="num_auto" placeholder="N. do Auto de Infração" minlength="5"
+                                        maxlength="6">
+                                </div>
+                                <div class="input-documentacao-data-auto">
+                                    <label for="date-auto">Data Autuação:</label>
+                                    <input type="date" id="date-auto" placeholder="Data Autuação">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-processo-administrativo">
+                            <label>Processo Administrativo:</label>
+                            <input type="text" placeholder="Processo vinculado">
+                            <label>CNPJ:</label>
+                            <input type="text" placeholder="Número da Pessoa Jurídica">
+                        </div>
+                        <div class="documentacao-textarea">
+                            <fieldset>
+                                <legend>Obs:</legend>
+                                <textarea placeholder="Descreva as observações"></textarea>
+                            </fieldset>
+                        </div>
+                        <div class="documentacao-radio">
+                            <fieldset>
+                                <legend>Reincidência</legend>
+                                <div class="cadastro-radio-imovel" required>
+                                    <input type="radio" name="reincidencia" value="SIM" id="sim">
+                                    <label for="sim">SIM</label><br>
+                                    <input type="radio" name="reincidencia" value="NAO" id="nao">
+                                    <label for="nao">NÃO</label><br>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="Responsavel-Tecnico" class="cadastro">
+                <div class="container cadastro-tecnico">
+                    <div>
+                        <h2>Auditor Fiscal</h2>
+                        <div class="input-cadastro-tecnico">
+                            <label for="nome-auditor">Nome Completo:</label>
+                            <input type="text" placeholder="Nome completo" id="nome-auditor" required>
+                            <label for="data-lancamento">Lançamento:</label>
+                            <div class="data-lancamento">
+                                <input type="date" placeholder="Data" id="data-lancamento" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </form>
+        <footer class="container footer">
+            <div class="border-formulario-footer">
+                <div class="container footer-botao">
+                    <input type="submit" value="ENVIAR">
+                    <input type="reset" value="APAGAR">
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
